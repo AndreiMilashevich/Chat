@@ -1,10 +1,9 @@
 
 
 function Header() {
-  return <div className="w-100 p-3 bg-danger">
-    <p>I will be a chat header!</p>
+  return <div className="w-100 p-3 bg-primary rounded-top">
     <label> Your name:
-      <input type="text" placeholder="Anonimous"/>
+      <input type="text" placeholder="Anonimous" className="mx-2"/>
     </label>
   </div>
 };

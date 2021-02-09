@@ -1,10 +1,8 @@
 function Footer() {
-  return <div className="w-100 p-3 bg-dark">
-    <p>I will be a chat footer!</p>
-    <label> 
-      <input type="text" placeholder="Message"/>
-    </label>
-  </div>
+  return <div class="input-group mb-3">
+  <textarea type="text" className="form-control" placeholder="Message" aria-label="Message" aria-describedby="button-addon2" />
+  <button className="btn btn-danger" type="button" id="button-addon2">Send</button>
+</div>
 };
 
 export default Footer;
