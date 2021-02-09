@@ -1,0 +1,12 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+.user_message {
+  width: 300px;
+  margin-left: 25px;
+  margin-top: 25px;
+  border-radius: 10px;
+  background-color: $indigo;
+  padding: 5px;
+  padding-left: 15px;
+  text-align: left;
+}
