@@ -1,6 +1,6 @@
 import './message.scss';
 
-function Message() {
+const Message = () => {
   return <div className="user_message"> user text</div>
 };
 

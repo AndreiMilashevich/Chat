@@ -1,14 +1,9 @@
 import './main.scss';
-import Message from '../message/message'
+import Message from '../Message/Message'
 
-function Main() {
+const Main = () => {
   return <div className="w-100 bg-info block-main">
-    <Message />
-    <Message />
-    <Message />
-    <Message />
-    <Message />
-    <Message />
+    
   </div>
 };
 

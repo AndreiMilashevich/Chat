@@ -1,11 +1,25 @@
+import './header.scss';
 
-
-function Header() {
-  return <div className="w-100 p-3 bg-primary rounded-top">
-    <label> Your name:
-      <input type="text" placeholder="Anonimous" className="mx-2"/>
-    </label>
-  </div>
-};
+const Header = () => {
+  return (
+    <div className=" bg-success">
+    <div className="input-group bg-success w-25 mt-2 mb-2 ">
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Username"
+        aria-label="Username"
+        aria-describedby="button-addon2"
+      />
+      <button
+        className="btn btn-info"
+        type="button"
+        id="button-addon2"
+      >
+        Button
+      </button>
+    </div></div>
+  );
+}
 
 export default Header;

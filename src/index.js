@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import Container from './components/container/Container';
-import Header from './components/header/header';
+import ChatApp from './components/ChatApp/ChatApp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-  <Container> 
-  </Container>,
+  <ChatApp />,
   document.getElementById('root')
 );
 
