@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import ChatApp from './components/ChatApp/ChatApp';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <ChatApp />,
