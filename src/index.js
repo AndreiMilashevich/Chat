@@ -2,14 +2,57 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import ChatApp from './components/ChatApp/ChatApp';
+import App from './components/App/App';
 
-ReactDOM.render(
-  <ChatApp />,
+let socket = new WebSocket('ws://localhost:3000');
+
+socket.onopen = () => {
+  alert('connected')
+}
+
+let userName = 'Roma';
+
+const users = [
+  {id: 0, name: 'Alex'},
+  {id: 1, name: 'Max'},
+  {id: 2, name: 'Rex'},
+];
+
+const messages = [
+  {id: 0, name: 'Alex', message: 'hello'},
+  {id: 1, name: 'Max', message: 'hi'},
+  {id: 2, name: 'Rex', message: 'Good bye'},
+]
+
+const rend = () => {ReactDOM.render(
+  <App />,
   document.getElementById('root')
-);
+)};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+rend();
+
+
+const messageButton = document.getElementById('messageButton');
+const nameButton = document.getElementById('nameButton');
+const nameInput = document.getElementById('nameInput');
+const messageInput = document.getElementById('messageInput');
+
+
+messageButton.addEventListener('click', () => {
+  messages.push({
+    id: messages.length,
+    name: userName,
+    message: messageInput.value,
+  });
+  messageInput.value = '';
+  rend();
+})
+
+
+
+
 reportWebVitals();
+
+
+export { users, messages };
+
