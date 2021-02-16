@@ -26,7 +26,7 @@ class Main extends React.Component {
         <div className="col-9 border border-primary d-flex flex-column align-items-end messageBlock__height overflow-auto">
           {
           this.state.messages.map((item) => {
-            return <Message userName={item.name} message={item.message} key={item.id}/>
+            return <Message userName={item.from} message={item.message} key={item.id}/>
           })
           }
         </div>

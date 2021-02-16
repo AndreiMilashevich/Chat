@@ -1,6 +1,5 @@
 import InputGroup from '../InputGroup/InputGroup';
-
-
+import React from 'react';
 
 const Footer = () => {
   return (

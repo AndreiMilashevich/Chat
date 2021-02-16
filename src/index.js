@@ -4,13 +4,12 @@ import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import App from './components/App/App';
 
-let socket = new WebSocket('ws://localhost:3000');
+let userName = "";
+let socket = new WebSocket('ws://chat.shas.tel');
 
 socket.onopen = () => {
-  alert('connected')
+  console.log('connected')
 }
-
-let userName = 'Roma';
 
 const users = [
   {id: 0, name: 'Alex'},
@@ -23,6 +22,16 @@ const messages = [
   {id: 1, name: 'Max', message: 'hi'},
   {id: 2, name: 'Rex', message: 'Good bye'},
 ]
+
+socket.onmessage = function(event) {
+  let res = event.data;
+  let mes = JSON.parse(res);
+  console.log(mes);
+  mes.forEach((element, index) => {
+    messages[index] = element;
+  });
+  rend();
+} 
 
 const rend = () => {ReactDOM.render(
   <App />,
@@ -54,5 +63,5 @@ messageButton.addEventListener('click', () => {
 reportWebVitals();
 
 
-export { users, messages };
+export { users, messages, userName };
 
