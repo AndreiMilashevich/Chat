@@ -6,7 +6,7 @@ import "./header.scss";
 class Header extends React.Component {
 	state = {
 		userName: localStorage.getItem("userName") || "",
-		userNameSubmited: false,
+		userNameSubmited: JSON.parse(localStorage.getItem('userNameSubmitted')),
 	};
 
 	submitHandler = (event) => {
@@ -14,6 +14,7 @@ class Header extends React.Component {
 		console.log(this.state.userName);
 		this.setState({ userNameSubmited: true });
 		localStorage.setItem("userName", `${this.state.userName}`);
+		localStorage.setItem("userNameSubmitted", true);
 	};
 
 	handleChange = (e) => {
@@ -26,7 +27,6 @@ class Header extends React.Component {
 				<div className="container-lg bg-primary py-2">
 					<div className="row">
 						<div className="col col-sm-7 text-light text-start fs-3">
-							{" "}
 							Simple Chat
 						</div>
 						<div className="col-12 col-sm-5">

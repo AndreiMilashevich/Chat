@@ -19,9 +19,7 @@ const users = [
 ];
 
 const messages = [
-	{ id: 0, name: "Alex", message: "hello" },
-	{ id: 1, name: "Max", message: "hi" },
-	{ id: 2, name: "Rex", message: "Good bye" },
+	
 ];
 
 socket.onmessage = function (event) {
