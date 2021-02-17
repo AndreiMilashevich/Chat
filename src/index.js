@@ -33,25 +33,25 @@ socket.onmessage = function (event) {
 	});
 };
 
-const rend = () => {
+
 	ReactDOM.render(<App />, document.getElementById("root"));
-};
 
 
-const messageButton = document.getElementById("messageButton");
-const nameButton = document.getElementById("nameButton");
-const nameInput = document.getElementById("nameInput");
-const messageInput = document.getElementById("messageInput");
 
-messageButton.addEventListener("click", () => {
-	messages.push({
-		id: messages.length,
-		name: userName,
-		message: messageInput.value,
-	});
-	messageInput.value = "";
-	rend();
-});
+// const messageButton = document.getElementById("messageButton");
+// const nameButton = document.getElementById("nameButton");
+// const nameInput = document.getElementById("nameInput");
+// const messageInput = document.getElementById("messageInput");
+
+// messageButton.addEventListener("click", () => {
+// 	messages.push({
+// 		id: messages.length,
+// 		name: userName,
+// 		message: messageInput.value,
+// 	});
+// 	messageInput.value = "";
+// 	rend();
+// });
 
 reportWebVitals();
 
